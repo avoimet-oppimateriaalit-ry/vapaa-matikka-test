@@ -31,3 +31,31 @@ for i in range(0, 350, 21):
 	geom.ympyra(geom.piste(5, 0), 2, "$\omega$", i, puoli = False)
 
 \end{kuva}
+
+\begin{kuva}
+a = 3.5
+b = 2
+c = sqrt(a**2 + b**2)
+A = geom.piste(0, 0, piirra = False)
+B = geom.piste(0, a, piirra = False)
+C = geom.piste(0, a + b, piirra = False)
+D = geom.piste(a, a + b, piirra = False)
+E = geom.piste(a + b, a + b, piirra = False)
+F = geom.piste(a + b, b, piirra = False)
+G = geom.piste(a + b, 0, piirra = False)
+H = geom.piste(b, 0, piirra = False)
+
+geom.jana(A, B, "$a$")
+geom.jana(B, C, "$b$")
+geom.jana(C, D, "$a$")
+geom.jana(D, E, "$b$")
+geom.jana(E, F, "$a$")
+geom.jana(F, G, "$b$")
+geom.jana(G, H, "$a$")
+geom.jana(H, A, "$b$")
+
+geom.jana(B, D, "$c$")
+geom.jana(D, F, "$c$")
+geom.jana(F, H, "$c$")
+geom.jana(H, B, "$c$")
+\end{kuva}
