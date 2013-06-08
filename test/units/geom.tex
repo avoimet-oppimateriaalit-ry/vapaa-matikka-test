@@ -2,19 +2,26 @@
 \begin{kuva}
 skaalaa(3)
 rajaa(minY = -1, maxY = 2)
-A = geom.piste(0, 0, "$A$", (-1, -1))
-B = geom.piste(1, 0, "$B$", (1, -1))
-C = geom.piste(0.5, 1, "$C$", (0, 1))
+A = geom.piste(0, 0, "$A$", -135)
+B = geom.piste(1, 0, "$B$", -45)
+C = geom.piste(0.5, 1, "$C$", 90)
 AB = geom.jana(A, B)
 BC = geom.jana(B, C)
 CA = geom.jana(C, A)
 
 s = geom.suora(geom.piste(0, -1, piirra = False), geom.piste(1, 1, piirra = False))
 
-Z = geom.leikkauspiste(AB, s, "$Z$", (1, -1))
+Z = geom.leikkauspiste(AB, s, "$Z$", -45)
 
 w = geom.ympyra((0.5, 1), 1, "$\omega$", -30)
 W = geom.leikkauspiste(BC, w, "$W$", valinta = 1)
 
 R = geom.leikkauspiste(w, s, "$R$")
+\end{kuva}
+
+\begin{kuva}
+for i in range(0, 350, 21):
+	geom.ympyra(geom.piste(0, 0), 2, "$\omega$", i)
+	geom.ympyra(geom.piste(5, 0), 2, "$\omega$", i, puoli = False)
+
 \end{kuva}
