@@ -10,6 +10,9 @@ BC = geom.jana(B, C)
 CA = geom.jana(C, A, "$x$")
 CA = geom.jana(C, A, "$y$", 0.3, False)
 
+ymp = geom.ymparipiirrettyYmpyra(A, B, C)
+geom.ympyranKeskipiste(ymp, "circumcenter")
+
 s = geom.suora(geom.piste(0, -1, piirra = False), geom.piste(1, 1, piirra = False))
 
 Z = geom.leikkauspiste(AB, s, "$Z$", -45)
