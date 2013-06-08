@@ -9,9 +9,12 @@ AB = geom.jana(A, B)
 BC = geom.jana(B, C)
 CA = geom.jana(C, A)
 
-X = geom.piste(0, -1, piirra = False)
-Y = geom.piste(1, 1, piirra = False)
-XY = geom.suora(X, Y)
+s = geom.suora(geom.piste(0, -1, piirra = False), geom.piste(1, 1, piirra = False))
 
-geom.leikkauspiste(AB, XY)
+Z = geom.leikkauspiste(AB, s, "$Z$", (1, -1))
+
+w = geom.ympyra((0.5, 1), 1, "$\omega$", -30)
+W = geom.leikkauspiste(BC, w, "$W$", valinta = 1)
+
+R = geom.leikkauspiste(w, s, "$R$")
 \end{kuva}
