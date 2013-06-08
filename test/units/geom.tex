@@ -1,0 +1,17 @@
+\section{Geometria}
+\begin{kuva}
+skaalaa(3)
+rajaa(minY = -1, maxY = 2)
+A = geom.piste(0, 0, "$A$", (-1, -1))
+B = geom.piste(1, 0, "$B$", (1, -1))
+C = geom.piste(0.5, 1, "$C$", (0, 1))
+AB = geom.jana(A, B)
+BC = geom.jana(B, C)
+CA = geom.jana(C, A)
+
+X = geom.piste(0, -1, piirra = False)
+Y = geom.piste(1, 1, piirra = False)
+XY = geom.suora(X, Y)
+
+geom.leikkauspiste(AB, XY)
+\end{kuva}
