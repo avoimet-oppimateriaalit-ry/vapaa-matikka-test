@@ -1,13 +1,14 @@
 \section{Geometria}
 \begin{kuva}
 skaalaa(3)
-rajaa(minY = -1, maxY = 2)
+rajaa(minY = -0.7, maxY = 1.7)
 A = geom.piste(0, 0, "$A$", -135)
 B = geom.piste(1, 0, "$B$", -45)
 C = geom.piste(0.5, 1, "$C$", 90)
 AB = geom.jana(A, B)
 BC = geom.jana(B, C)
-CA = geom.jana(C, A)
+CA = geom.jana(C, A, "$x$")
+CA = geom.jana(C, A, "$y$", 0.3, False)
 
 s = geom.suora(geom.piste(0, -1, piirra = False), geom.piste(1, 1, piirra = False))
 
@@ -17,6 +18,8 @@ w = geom.ympyra((0.5, 1), 1, "$\omega$", -30)
 W = geom.leikkauspiste(BC, w, "$W$", valinta = 1)
 
 R = geom.leikkauspiste(w, s, "$R$")
+
+geom.leikkauspiste(geom.suora((1, 0), (2, 1)), w, "$P$")
 \end{kuva}
 
 \begin{kuva}
