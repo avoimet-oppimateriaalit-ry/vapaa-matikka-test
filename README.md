@@ -1,4 +1,3 @@
-vapaa-matikka-test
-==================
+## Vapaa matikka TEST
 
-Repo for testing commons updates.
+Repo for testing Vapaa matikka COMMONS updates.
