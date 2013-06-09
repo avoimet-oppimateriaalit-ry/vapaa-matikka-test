@@ -128,3 +128,11 @@ O = geom.ympyranKeskipiste(w, "$O$")
 CO = geom.suora(C, O, piirra = False)
 geom.leikkauspiste(CO, w)
 \end{kuva}
+
+\begin{kuva}
+rajaa(minX = -2, maxX = 2, minY = -2, maxY = 2)
+geom.puolisuoraSuuntaan((0, 0), 5, 7)
+geom.suoraSuuntaan((1, 1), -1, 1)
+w = geom.ympyra((0, 0), 1)
+geom.ympyranKehapiste(w, -156)
+\end{kuva}
