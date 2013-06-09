@@ -59,3 +59,45 @@ geom.jana(D, F, "$c$")
 geom.jana(F, H, "$c$")
 geom.jana(H, B, "$c$")
 \end{kuva}
+
+\begin{kuva}
+skaalaa(0.2)
+for i in range(4):
+	skaalaa(1.3)
+	if(i == 3): skaalaaX(2)
+	siirraX(4)
+	
+	A = geom.piste(2, 3)
+	B = geom.piste(0, 0)
+	C = geom.piste(-2, 3)
+
+	geom.jana(B, A)
+	geom.jana(B, C)
+
+	geom.kulma(A, B, C)
+\end{kuva}
+
+\begin{kuva}
+geom.skaalaa(6)
+
+X = geom.piste(0, 0)
+def p(a):
+	P = geom.piste(cos(a), sin(a))
+	geom.jana(X, P)
+	return P
+A = p(0)
+B = p(0.1)
+C = p(0.3)
+D = p(0.7)
+E = p(1.4)
+F = p(2.3)
+G = p(3.8)
+
+geom.kulma(A, X, B, r"$\alpha$")
+geom.kulma(B, X, C, r"$\beta$", 2)
+geom.kulma(C, X, D, r"$\gamma$")
+geom.kulma(D, X, E, r"$\delta$")
+geom.kulma(E, X, F, r"$\epsilon$", 3)
+geom.kulma(F, X, G, r"$\zeta$")
+geom.kulma(G, X, A, r"$\eta$")
+\end{kuva}
