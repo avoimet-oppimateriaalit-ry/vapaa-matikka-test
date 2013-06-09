@@ -111,3 +111,20 @@ geom.piste(0, 0)
 \end{kuva}
 
 bsd
+
+
+\begin{kuva}
+A = geom.piste(0, 0, "$A$", suunta = -130)
+B = geom.piste(5, 2, "$B$")
+C = geom.piste(3, 4, "$C$", suunta = 80)
+
+geom.jana(A, B)
+geom.jana(B, C)
+geom.jana(C, A)
+
+w = geom.ymparipiirrettyYmpyra(A, B, C, r"$\omega$", kohta = -40)
+O = geom.ympyranKeskipiste(w, "$O$")
+
+CO = geom.suora(C, O, piirra = False)
+geom.leikkauspiste(CO, w)
+\end{kuva}
