@@ -136,3 +136,20 @@ geom.suoraSuuntaan((1, 1), -1, 1)
 w = geom.ympyra((0, 0), 1)
 geom.ympyranKehapiste(w, -156)
 \end{kuva}
+
+\begin{kuva}
+skaalaa(3)
+A = geom.piste(1, 1)
+B = geom.piste(0, 0)
+C = geom.piste(-1, 1)
+geom.jana(A, B)
+geom.jana(B, C)
+geom.suorakulma(A, B)
+\end{kuva}
+
+\begin{kuva}
+rajaa(minX = -2, maxX = 2, minY = -2, maxY = 2)
+P = geom.piste(0, 1, "$P$")
+s = geom.suora((-1, -1), (1, 0))
+geom.projektio(P, s, "$Q$")
+\end{kuva}
