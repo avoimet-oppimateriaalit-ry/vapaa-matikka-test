@@ -157,3 +157,20 @@ geom.projektio(P, s, "$Q$")
 \begin{kuva}
 geom.kaari((0, 0), 1, 60, 360 - 60)
 \end{kuva}
+
+\begin{kuva}
+	skaalaa(2)
+	
+	f = lambda x: (cos(pi * x / 180), sin(pi * x / 180))
+	A = f(30)
+	B = f(100)
+	C = f(135)
+	O = (0, 0)
+	
+	geom.jana(O, A)
+	geom.jana(O, B)
+	geom.jana(O, C)
+	
+	geom.kulma(B, O, C, r"$\beta$")
+	geom.kulma(A, O, C, r"$\alpha$", suunta = 65)
+\end{kuva}
